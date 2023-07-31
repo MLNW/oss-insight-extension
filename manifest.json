@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "OssInsight",
+  "version": "1.0",
+
+  "description": "Analyze the current user or repository.",
+
+  "icons": {},
+
+  "browser_action": {
+    "default_title": "Click to redirect"
+  },
+
+  "permissions": ["activeTab", "tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
