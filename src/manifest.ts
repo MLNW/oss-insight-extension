@@ -1,28 +1,28 @@
 import pkg from "../package.json";
 
 const sharedManifest: Partial<chrome.runtime.ManifestBase> = {
-  //icons: {
-  //  16: "icons/16.png",
-  //  19: "icons/19.png",
-  //  32: "icons/32.png",
-  //  38: "icons/38.png",
-  //  48: "icons/48.png",
-  //  64: "icons/64.png",
-  //  96: "icons/96.png",
-  //  128: "icons/128.png",
-  //  256: "icons/256.png",
-  //  512: "icons/512.png",
-  //},
+  icons: {
+    16: "icons/circle-on.svg",
+    19: "icons/circle-on.svg",
+    32: "icons/circle-on.svg",
+    38: "icons/circle-on.svg",
+    48: "icons/circle-on.svg",
+    64: "icons/circle-on.svg",
+    96: "icons/circle-on.svg",
+    128: "icons/circle-on.svg",
+    256: "icons/circle-on.svg",
+    512: "icons/circle-on.svg",
+  },
   permissions: ["activeTab", "tabs"],
 };
 
 const browserAction = {
-  //default_icon: {
-  //  16: "icons/16.png",
-  //  19: "icons/19.png",
-  //  32: "icons/32.png",
-  //  38: "icons/38.png",
-  //},
+  default_icon: {
+    16: "icons/circle-on.svg",
+    19: "icons/circle-on.svg",
+    32: "icons/circle-on.svg",
+    38: "icons/circle-on.svg",
+  },
 };
 
 const ManifestV2 = {

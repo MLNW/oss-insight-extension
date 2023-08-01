@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "displayName": "Analyze OSS",
   "author": "Lucas Resch",
-  "description": "Analyze GitHub users and repositories via OSS insight.",
+  "description": "Analyze GitHub users and repositories on OSS Insight.",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && web-ext build --source-dir dist/",
     "watch": "vite build --watch --mode development --minify false",
     "dev": "vite",
     "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",

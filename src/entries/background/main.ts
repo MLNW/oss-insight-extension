@@ -7,19 +7,29 @@ let target: string | undefined;
 // A function to determine whether the URL of the tab is one we want the browser action for
 function checkUrl(tab: browser.Tabs.Tab) {
   const redirectTarget = sanitze(tab.url);
+
   if (redirectTarget) {
     // If the URL matches, enable the browser action
-    browser.browserAction.setIcon({ path: "icon-active.png", tabId: tab.id });
+    browser.browserAction.setIcon({
+      path: "icons/circle-on.svg",
+      tabId: tab.id,
+    });
     browser.browserAction.setTitle({
-      title: `Click to redirect to ${redirectTarget}`,
+      title: `OSS Insight - Analyze ${redirectTarget}`,
       tabId: tab.id,
     });
     activeTabId = tab.id;
     target = redirectTarget;
   } else {
     // Otherwise, disable the browser action
-    browser.browserAction.setIcon({ path: "icon-inactive.png", tabId: tab.id });
-    browser.browserAction.setTitle({ title: "Inactive", tabId: tab.id });
+    browser.browserAction.setIcon({
+      path: "icons/circle-off.svg",
+      tabId: tab.id,
+    });
+    browser.browserAction.setTitle({
+      title: "OSS Insight - Analyze GitHub users and repos",
+      tabId: tab.id,
+    });
     if (activeTabId === tab.id) {
       activeTabId = undefined;
       target = undefined;
